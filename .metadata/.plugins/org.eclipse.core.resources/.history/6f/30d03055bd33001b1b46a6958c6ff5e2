@@ -1,0 +1,12 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		String password = "NoobLord69";
+		String passwordAttempt;
+		System.out.println("Wellcome to 'Guess The Password!'. You have 3 chances to get it right, good luck!");
+		passwordAttempt = System.in.toString();
+
+	}
+
+}

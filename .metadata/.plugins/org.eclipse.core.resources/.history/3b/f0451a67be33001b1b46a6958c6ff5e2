@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		byte counter=0; 
+		String password = "NoobLord69";
+		String passwordAttempt;
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Wellcome to 'Guess The Password!'. You have 3 chances to get it right, good luck!");
+		while() {
+		passwordAttempt = scan.nextLine();
+		if (password.equals(passwordAttempt)) {
+			System.out.println("You did it!");
+			scan.close();
+		}}
+	}
+
+}
