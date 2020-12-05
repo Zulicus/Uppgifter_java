@@ -8,6 +8,7 @@ public class Main {
 		System.out.println("Welcome to Rock Paper Scissor, please type in number of players (1 or 2)");
 		Scanner scan = new Scanner(System.in);
 		String input = scan.nextLine();
+		// Makes the game replayable
 		while (play) {
 			if (input.equals("1") || input.equals("one")) {
 				singlePlayer();
@@ -19,15 +20,16 @@ public class Main {
 			} else {
 				System.out.println("Please select a valid imput");
 			}
-			if(play) {
+			if (play) {
 				System.out.println("Please type in number of players (1 or 2)");
 				input = scan.nextLine();
 			}
-			
+
 		}
 		scan.close();
 	}
 
+//Method to give the player(s) a choice of whether to play again or not
 	public static boolean playAgain() {
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Play again? y/n");
@@ -39,6 +41,7 @@ public class Main {
 		}
 	}
 
+//Manages the single player and AI scenario 
 	public static void singlePlayer() {
 		Random rand = new Random();
 		Scanner scan = new Scanner(System.in);
@@ -49,6 +52,7 @@ public class Main {
 		runGame(inputOne, computer);
 	}
 
+//Manages the multiplayer scenario
 	public static void multiPlayer() {
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Two players selected!");
@@ -59,6 +63,7 @@ public class Main {
 		runGame(inputOne, inputTwo);
 	}
 
+//Calculates who won
 	public static void runGame(String playerOne, String playerTwo) {
 		playerOne = playerOne.toLowerCase();
 		playerTwo = playerTwo.toLowerCase();
