@@ -13,7 +13,6 @@ public class Main {
 			if (input.equals("1") || input.equals("one")) {
 				singlePlayer();
 				play = playAgain();
-
 			} else if (input.equals("2") || input.equals("two")) {
 				multiPlayer();
 				play = playAgain();
@@ -24,7 +23,6 @@ public class Main {
 				System.out.println("Please type in number of players (1 or 2)");
 				input = scan.nextLine();
 			}
-
 		}
 		scan.close();
 	}
@@ -48,8 +46,17 @@ public class Main {
 		System.out.println("One player selected!");
 		System.out.println("Player, choose /Rock/(1), /Paper/(2) or /Scissor/(3): ");
 		String inputOne = scan.nextLine();
-		//Since the random generator only does 0-2 I have to add one for it to do 1-3
+		// Since the random generator only does 0-2 I have to add one for it to do 1-3
 		String computer = Integer.toString(rand.nextInt(3) + 1);
+		if (computer.equals("1")) {
+			System.out.println("Computer chose Rock!");
+		} else if (computer.equals("2")) {
+			System.out.println("Computer chose Paper!");
+		} else if (computer.equals("3")) {
+			System.out.println("Computer chose Scissor!");
+		} else {
+			System.out.println("Computer Broke!");
+		}
 		runGame(inputOne, computer);
 	}
 
@@ -99,7 +106,6 @@ public class Main {
 				System.out.println("Invalid choice by player two!");
 				break;
 			}
-
 			break;
 		}
 		case "paper": {
@@ -267,5 +273,4 @@ public class Main {
 			break;
 		}
 	}
-
 }
